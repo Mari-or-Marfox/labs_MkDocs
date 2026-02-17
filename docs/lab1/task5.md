@@ -10,8 +10,8 @@
 Отдать информацию обо всех оценках по дисциплинам в виде HTML-страницы.
 ## Код сервера
 ```python
-import socket  # библиотека для работы с сетевыми соединениями
-import sys     # библиотека для работы с аргументами командной строки и выходом из программы
+import socket  
+import sys    
 
 # Наш простой HTTP-сервер
 class MyHTTPServer:
@@ -25,7 +25,7 @@ class MyHTTPServer:
 
     # Главный метод сервера, который будет работать бесконечно
     def serve_forever(self):
-        # создаём TCP-сокет (IPv4)
+        # создаём TCP-сокет 
         serv_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         # включаем возможность использовать один и тот же адрес/порт сразу после перезапуска сервера
         serv_sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
@@ -39,13 +39,13 @@ class MyHTTPServer:
 
             # бесконечный цикл — сервер работает постоянно
             while True:
-                # ждём, пока кто-то подключится
+                # ждём одключения
                 conn, _ = serv_sock.accept()
                 try:
                     # обрабатываем конкретного клиента
                     self.serve_client(conn)
                 except Exception as e:
-                    # если что-то пошло не так, просто выводим ошибку
+                    # просто выводим ошибку
                     print('Client serving failed', e)
         finally:
             # при закрытии сервера — закрываем сокет
@@ -64,7 +64,7 @@ class MyHTTPServer:
             # клиент закрыл соединение внезапно — просто игнорируем
             conn = None
         except Exception as e:
-            # если ошибка сервера — отправляем страницу с ошибкой 500
+            # если ошибка сервера, то отправляем страницу с ошибкой 500
             self.send_error(conn, e)
 
         # закрываем соединение с клиентом, если оно ещё открыто
@@ -75,7 +75,7 @@ class MyHTTPServer:
     def parse_request(self, conn):
         # создаём объект, как файл, чтобы удобно читать построчно
         rfile = conn.makefile('r', encoding='utf-8')
-        # читаем первую строку запроса, например: GET / HTTP/1.1
+        # читаем первую строку запроса
         request_line = rfile.readline().strip().split()
         if len(request_line) != 3:
             # если строка не имеет 3 частей — это невалидный HTTP-запрос
@@ -191,10 +191,10 @@ if __name__ == '__main__':
     # создаём сервер
     serv = MyHTTPServer(host, port, name)
     try:
-        # запускаем сервер навсегда
+        # запускаем сервер 
         serv.serve_forever()
     except KeyboardInterrupt:
-        # если Ctrl+C — корректно останавливаем
+        # если Ctrl+C 
         print("\nServer stopped")
         sys.exit(0)
 
