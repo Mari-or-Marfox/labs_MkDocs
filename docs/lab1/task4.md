@@ -11,8 +11,8 @@
 import socket
 import threading
 
-users = []     # список подключений
-names = []     # имена пользователей
+users = []   
+names = []     
 
 def send_all(msg, sender=None):
     for u in users:
@@ -90,7 +90,6 @@ name = input("Как тебя зовут? ")
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 sock.connect(("127.0.0.1", 5555))
 
-# поток для получения сообщений
 def get_messages():
     while True:
         try:
@@ -104,14 +103,12 @@ def get_messages():
             sock.close()
             break
 
-# поток для отправки сообщений
 def send_messages():
     while True:
         text = input()
-        if text:  # если что-то написано
+        if text:  
             sock.send(f"{text}".encode("utf-8"))
 
-# запуск потоков
 threading.Thread(target=get_messages).start()
 threading.Thread(target=send_messages).start()
 ```
