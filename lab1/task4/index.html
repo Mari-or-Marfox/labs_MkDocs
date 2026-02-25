@@ -67,13 +67,13 @@
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a href="../../lab2/" class="nav-link">Лабораторная 2</a>
+                                <a href="../../lab2/index2/" class="nav-link">Лабораторная 2</a>
                             </li>
                             <li class="nav-item">
-                                <a href="../../lab3/" class="nav-link">Лабораторная 3</a>
+                                <a href="../../lab3/index3/" class="nav-link">Лабораторная 3</a>
                             </li>
                             <li class="nav-item">
-                                <a href="../../lab4/" class="nav-link">Лабораторная 4</a>
+                                <a href="../../lab4/index4/" class="nav-link">Лабораторная 4</a>
                             </li>
                         </ul>
 
@@ -159,8 +159,8 @@
 <pre><code class="language-python">import socket
 import threading
 
-users = []     # список подключений
-names = []     # имена пользователей
+users = []   
+names = []     
 
 def send_all(msg, sender=None):
     for u in users:
@@ -237,7 +237,6 @@ name = input(&quot;Как тебя зовут? &quot;)
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 sock.connect((&quot;127.0.0.1&quot;, 5555))
 
-# поток для получения сообщений
 def get_messages():
     while True:
         try:
@@ -251,14 +250,12 @@ def get_messages():
             sock.close()
             break
 
-# поток для отправки сообщений
 def send_messages():
     while True:
         text = input()
-        if text:  # если что-то написано
+        if text:  
             sock.send(f&quot;{text}&quot;.encode(&quot;utf-8&quot;))
 
-# запуск потоков
 threading.Thread(target=get_messages).start()
 threading.Thread(target=send_messages).start()
 </code></pre>

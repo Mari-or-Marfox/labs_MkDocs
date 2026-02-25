@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Лабораторная 2 - Отчет по лабораторным работам</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Отчет по лабораторным работам</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Главная</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Лабораторная 1</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../lab1/index_lab1/" class="dropdown-item">Оглавление</a>
+</li>
+                                    
+<li>
+    <a href="../../lab1/task1/" class="dropdown-item">Задание 1</a>
+</li>
+                                    
+<li>
+    <a href="../../lab1/task2/" class="dropdown-item">Задание 2</a>
+</li>
+                                    
+<li>
+    <a href="../../lab1/task3/" class="dropdown-item">Задание 3</a>
+</li>
+                                    
+<li>
+    <a href="../../lab1/task4/" class="dropdown-item">Задание 4</a>
+</li>
+                                    
+<li>
+    <a href="../../lab1/task5/" class="dropdown-item">Задание 5</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">Лабораторная 2</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../lab3/index3/" class="nav-link">Лабораторная 3</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../lab4/index4/" class="nav-link">Лабораторная 4</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../../lab1/task5/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../lab3/index3/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#2" class="nav-link">Отчет по 2 лабораторной работе</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#_1" class="nav-link">Главное меню для неавторизованного пользователя</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_2" class="nav-link">Регистрация новых пользователей</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_3" class="nav-link">Логирование пользователя</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_4" class="nav-link">Главное меню после авторизации в качестве преподавателя</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_5" class="nav-link">Список домашних заданий с интерфейса преподавателя</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_6" class="nav-link">Интерфейс создания домашнего задания</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_7" class="nav-link">Интерфейс редактирования домашнего задания</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_8" class="nav-link">Интерфейс удаления домашнего задания</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_9" class="nav-link">Интерфейс со списком имеющихся классов</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_10" class="nav-link">Детализация по контретному классу</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_11" class="nav-link">Интерфейс редактирования конктреного класса</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_12" class="nav-link">Интерфейс создания нового класса</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_13" class="nav-link">Интерфейс назначения предметов классам</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_14" class="nav-link">Пример выбора конкретного класса</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_15" class="nav-link">Добавление нового предмета к классу</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_16" class="nav-link">Интерфейс ученика (главная страница)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_17" class="nav-link">Список домашних заданий</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_18" class="nav-link">Интерфейс сдачи домашнего задания</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_19" class="nav-link">Интерфейс просмотра текущего класса</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#admin-" class="nav-link">Admin-панель для учителя</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_20" class="nav-link">Пример ответа ученика и проставления оценки</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#3" class="nav-link">Архитектура программы разделена на 3 приложения</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="2">Отчет по 2 лабораторной работе</h1>
+<p>Тема: Доска домашних заданий</p>
+<h2 id="_1">Главное меню для неавторизованного пользователя</h2>
+<p><img alt="Сервер" src="../images/%D0%BB%D0%B0%D0%B1.png" /></p>
+<h2 id="_2">Регистрация новых пользователей</h2>
+<p><img alt="Сервер" src="../images/Screenshot_1.png" /></p>
+<h2 id="_3">Логирование пользователя</h2>
+<p><img alt="Сервер" src="../images/Screenshot_2.png" /></p>
+<h2 id="_4">Главное меню после авторизации в качестве преподавателя</h2>
+<p>Учителю доступны следующие действия:
+1. CRUD по домашним работам
+2. CRUD по классам
+3. CRUD по предметам
+CRUD доступен только для тех элементов, которые созданы текущим преподавателем
+<img alt="Сервер" src="../images/Screenshot_3.png" /></p>
+<h2 id="_5">Список домашних заданий с интерфейса преподавателя</h2>
+<p><img alt="Сервер" src="../images/Screenshot_4.png" /></p>
+<h2 id="_6">Интерфейс создания домашнего задания</h2>
+<p><img alt="Сервер" src="../images/Screenshot_5.png" /></p>
+<h2 id="_7">Интерфейс редактирования домашнего задания</h2>
+<p><img alt="Сервер" src="../images/Screenshot_6.png" /></p>
+<h2 id="_8">Интерфейс удаления домашнего задания</h2>
+<p><img alt="Сервер" src="../images/Screenshot_7.png" /></p>
+<h2 id="_9">Интерфейс со списком имеющихся классов</h2>
+<p><img alt="Сервер" src="../images/Screenshot_8.png" /></p>
+<h2 id="_10">Детализация по контретному классу</h2>
+<p><img alt="Сервер" src="../images/Screenshot_9.png" /></p>
+<h2 id="_11">Интерфейс редактирования конктреного класса</h2>
+<p><img alt="Сервер" src="../images/Screenshot_10.png" /></p>
+<h2 id="_12">Интерфейс создания нового класса</h2>
+<p><img alt="Сервер" src="../images/Screenshot_11.png" /></p>
+<h2 id="_13">Интерфейс назначения предметов классам</h2>
+<p>Для этого необходимо выбрать класс из левого столбца - справа будут показаны предметы для конктреного класса
+<img alt="Сервер" src="../images/Screenshot_12.png" /></p>
+<h2 id="_14">Пример выбора конкретного класса</h2>
+<p><img alt="Сервер" src="../images/Screenshot_13.png" /></p>
+<h2 id="_15">Добавление нового предмета к классу</h2>
+<p><img alt="Сервер" src="../images/Screenshot_14.png" /></p>
+<h2 id="_16">Интерфейс ученика (главная страница)</h2>
+<p>Ему доступны:
+1. Отправления ответов на домашние задания
+2. Просмотр списка домашних заданий
+3. Просмотр класса, где находится ученик
+<img alt="Сервер" src="../images/Screenshot_15.png" /></p>
+<h2 id="_17">Список домашних заданий</h2>
+<p>Указывается какая оценка получена за домашнее задание, кто преподаватель, срок сдачи, предмет и название работы. Есть возможность изменить решение или сдать работу
+<img alt="Сервер" src="../images/Screenshot_16.png" /></p>
+<h2 id="_18">Интерфейс сдачи домашнего задания</h2>
+<p><img alt="Сервер" src="../images/Screenshot_17.png" /></p>
+<h2 id="_19">Интерфейс просмотра текущего класса</h2>
+<p><img alt="Сервер" src="../images/Screenshot_18.png" /></p>
+<h2 id="admin-">Admin-панель для учителя</h2>
+<p>Здесь есть возможность выбрать домашнее задание и проставить оценку
+<img alt="Сервер" src="../images/Screenshot_19.png" /></p>
+<h2 id="_20">Пример ответа ученика и проставления оценки</h2>
+<p><img alt="Сервер" src="../images/Screenshot_20.png" /></p>
+<h2 id="3">Архитектура программы разделена на 3 приложения</h2>
+<p>users - отвечает за вход и регистрацию
+academic - отвечает за классы и предметы
+homework - отвечает за условие домашних работ и за подтверждение ответа на задание
+Ниже приведена реализация архитектуры на пример models.py</p>
+<pre><code class="language-python">from django.contrib.auth.models import AbstractUser
+from django.db import models
+
+class User(AbstractUser):
+    ROLE_CHOICES = ((&quot;student&quot;, &quot;Ученик&quot;),
+                    (&quot;teacher&quot;, &quot;Учитель&quot;))
+    role = models.CharField(
+        choices = ROLE_CHOICES,
+        max_length = 20)
+    def save(self, *args, **kwargs):
+        if self.role == &quot;teacher&quot;:
+            self.is_staff = True
+            self.is_superuser = True
+        super().save(*args, **kwargs)
+</code></pre>
+<pre><code class="language-python">from django.db import models
+from SchoolSystem import settings
+from academic.models import Subject
+
+class Homework(models.Model):
+    subject = models.ForeignKey(Subject, on_delete=models.CASCADE)
+    teacher = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, limit_choices_to={'is_staff': True})
+    title = models.CharField(max_length=200)
+    description = models.TextField()
+    date_assigned = models.DateField()
+    due_date = models.DateField()
+    penalty_info = models.TextField(blank=True, null=True)
+
+    def str(self):
+        return f&quot;{self.subject} - {self.title}&quot;
+
+
+class Submission(models.Model):
+    homework = models.ForeignKey(Homework, on_delete=models.CASCADE)
+    student = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, limit_choices_to={'is_staff': False})
+    submission_text = models.TextField()
+    submitted_at = models.DateTimeField(auto_now_add=True)
+    grade = models.IntegerField(blank=True, null=True)
+
+    def str(self):
+        return f&quot;{self.student.username} - {self.homework.title}&quot;
+</code></pre>
+<pre><code class="language-python">from django.db import models
+from django.conf import settings
+
+class SchoolClass(models.Model):
+    name = models.CharField(max_length=50)
+    teacher = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name=&quot;class_teacher&quot;
+    )
+
+    def str(self):
+        return self.name
+class Subject(models.Model):
+    name = models.CharField(max_length=100)
+    school_class = models.ForeignKey(
+        SchoolClass,
+        on_delete=models.CASCADE,
+        related_name=&quot;subjects&quot;
+    )
+
+    def str(self):
+        return f&quot;{self.name} ({self.school_class.name})&quot;
+class StudentProfile(models.Model):
+    user = models.OneToOneField(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE
+    )
+    school_class = models.ForeignKey(
+        SchoolClass,
+        on_delete=models.CASCADE,
+        related_name=&quot;students&quot;,
+        null=True,
+        blank=True
+    )
+    def str(self):
+        if self.school_class:
+            return f&quot;{self.user.username} - {self.school_class.name}&quot;
+        return f&quot;{self.user.username} - Без класса&quot;
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
